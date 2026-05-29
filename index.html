@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shockwave Electric | Licensed Electrician Sarasota County &amp; Southwest Florida</title>
+  <meta name="description" content="Shockwave Electric delivers residential and light commercial electrical work across Sarasota County, Hillsborough, Port Charlotte, DeSoto, and Hardee County. 20 years of hands-on expertise.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="accordion.css">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="btn.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="content-cards-image.css">
+  <link rel="stylesheet" href="content-page.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="gutenberg.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="how-it-works.css">
+  <link rel="stylesheet" href="img.css">
+  <link rel="stylesheet" href="intro.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav-mobile.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="photo-gallery.css">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="products-single.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="social-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="typewriter.css">
+  <link rel="stylesheet" href="woocommerce.css">
+  <style>
+    :root {
+      --accent-primary: #f5c842;
+      --accent-primary-rgb: 245, 200, 66;
+      --accent-secondary: #0d1f2d;
+      --accent-secondary-rgb: 13, 31, 45;
+      --accent-tertiary: #e87c1e;
+      --accent-tertiary-rgb: 232, 124, 30;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .bg-accent-secondary {
+      background: var(--accent-secondary);
+    }
+
+    .bg-black {
+      background: var(--bg-black);
+    }
+
+    .bg-accent {
+      background: var(--accent-primary);
+      color: #111;
+    }
+
+    .text-accent {
+      color: var(--accent-primary);
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .border-radius {
+      border-radius: var(--border-radius);
+    }
+
+    .overflow-h {
+      overflow: hidden;
+    }
+
+    .desktop-hidden {
+      display: none;
+    }
+
+    .header-nav {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+
+    .menu {
+      align-items: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 8rem 0 3rem;
+      overflow: hidden;
+    }
+
+    .hero .bg-img {
+      filter: saturate(0.9) contrast(1.05);
+    }
+
+    .stats h2 {
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+    }
+
+    .col-hover > div {
+      min-height: 420px;
+      transition: transform 0.25s ease;
+    }
+
+    .col-hover:hover > div {
+      transform: translateY(-6px);
+    }
+
+    .gallery-flex img {
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .accordion {
+      padding: 1.25rem 2rem 1.25rem 0;
+    }
+
+    .accordion .button {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .accordion .chevron {
+      right: 0;
+      top: 1.4rem;
+      width: 14px;
+      transition: transform 0.25s ease;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+    }
+
+    .accordion.active .chevron {
+      transform: rotate(90deg);
+    }
+
+    .accordion.active .accordion-content {
+      max-height: 300px;
+    }
+
+    .modal-custom {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.75);
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-custom.is-open {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+
+    .modal-content-custom {
+      width: min(90vw, 440px);
+      margin-left: auto;
+      position: relative;
+      overflow-y: auto;
+    }
+
+    .close-custom {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .nav-toggle .line-1,
+    .nav-toggle .line-2,
+    .nav-toggle .line-3 {
+      width: 28px;
+      height: 2px;
+      background: var(--accent-primary);
+      margin: 6px auto;
+      border-radius: 10px;
+    }
+
+    .gform_wrapper input,
+    .gform_wrapper textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+    }
+
+    .gform_wrapper label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .gform_wrapper .gfield {
+      margin-bottom: 1rem;
+    }
+
+    .gform_button {
+      border: 0;
+    }
+
+    .divider {
+      width: 110px;
+      height: 4px;
+      background: var(--accent-primary);
+      border-radius: 999px;
+    }
+
+    .si svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media (max-width: 991.98px) {
+      .mobile-hidden {
+        display: none !important;
+      }
+
+      .desktop-hidden {
+        display: block;
+      }
+
+      .header-nav {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .gallery-flex {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem !important;
+      }
+
+      .gallery-flex > div {
+        margin: 0 !important;
+      }
+
+      .gallery-flex > div img {
+        transform: none !important;
+        width: 100%;
+        height: 180px !important;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      h1 {
+        max-width: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 7rem;
+      }
+
+      .header-nav .btn-main {
+        font-size: 11px;
+      }
+
+      .gallery-flex {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-nav w-100 position-fixed" style="top:0;left:0;z-index:10;">
+    <div class="nav">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-3 col-md-4 col-4 text-center" style="padding: 0px 10px 10px; border-top: 5px solid black; background: white; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+            <a href="/" title="Shockwave Electric - Licensed Electrician Southwest Florida">
+              <div id="logoMain" style="min-width:100px;width:90%;transition:all .25s ease-in-out;">
+                <img src="Logo.png" alt="Shockwave Electric logo">
+              </div>
+            </a>
+          </div>
+
+          <div class="col-7 text-center mobile-hidden">
+            <div class="d-flex justify-content-end h-100">
+              <div class="menu-primary-container">
+                <ul id="menu-primary" class="menu list-unstyled mb-0 d-flex">
+                  <li><a href="/services/panel-replacement/">Panel Replacement</a></li>
+                  <li><a href="/services/ev-charger-installation/">EV Chargers</a></li>
+                  <li><a href="/services/light-commercial/">Light Commercial</a></li>
+                  <li><a href="/about/">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 text-center desktop-hidden">
+            <a id="mobileMenuToggle" class="openModalBtnCustom nav-toggle" data-modal-id="mobileMenu" title="mobile menu nav toggle">
+              <div style="padding:10px 0;">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-5 text-white bold text-lg-start text-end" style="padding-left:0;">
+            <div><a class="small" style="margin:0;" href="#get-estimate"><span class="btn-main">Get Free Estimate &rarr;</span></a></div>
+            <a href="tel:9412223333" class="text-link d-inline-block phone text-shadow">(941) 222-3333</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="position-relative hero bg-accent-secondary d-flex align-items-end">
+      <picture>
+        <source type="image/webp" srcset="Image-01.png">
+        <img src="Image-01.png" alt="Shockwave Electric licensed electrician Southwest Florida" class="position-absolute bg-img" style="width:98%;height:98%;top:1%;left:1%;object-fit:cover;pointer-events:none;border-radius:16px;">
+      </picture>
+      <div class="position-absolute h-100" style="bottom:1%;left:1%;width:98%;border-radius:16px;background:linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-12 text-white">
+            <div class="col-10" style="padding:0px;">
+              <h1 class="text-shadow">Get Your Electrical Problem Fixed Right the First Time Without Waiting Weeks<br><span class="h2 d-block mt-2">Licensed Electrician Serving Southwest Florida</span></h1>
+            </div>
+            <div class="d-flex flex-wrap bold" style="padding-bottom:25px;">
+              <div class="col-lg-6" style="padding-left:0;">
+                <p class="text-shadow">20 years of hands-on electrical work for homes and businesses across Sarasota County. Panel replacements, EV chargers, lighting, and light commercial work done right, with permits pulled and inspections handled for you.</p>
+              </div>
+              <div class="col-lg-3" style="padding-left:0;">
+                <a class="btn-main d-inline-block small" href="#get-estimate" style="margin-left:0;">Get Free Estimate</a>
+                <div style="margin:15px 0;">
+                  <span>Call Now: </span>
+                  <a href="tel:9412223333" class="text-link d-inline-block phone">(941) 222-3333</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="position-relative bg-accent-secondary" style="padding:100px 0 50px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="w-100 d-flex flex-wrap justify-content-center">
+            <div class="col-lg-2 col-6 text-white text-center"><div class="stats"><h2 class="text-accent h1" style="margin-top:0;">20</h2><p>Years in Practice</p></div></div>
+            <div class="col-lg-2 col-6 text-white text-center"><div class="stats"><h2 class="text-accent h1" style="margin-top:0;">5</h2><p>Counties Served in SW Florida</p></div></div>
+            <div class="col-lg-2 col-6 text-white text-center"><div class="stats"><h2 class="text-accent h1" style="margin-top:0;">30%</h2><p>Deposit, We Handle the Rest</p></div></div>
+            <div class="col-lg-2 col-6 text-white text-center"><div class="stats"><h2 class="text-accent h1" style="margin-top:0;">100%</h2><p>Permits and Inspections In-House</p></div></div>
+            <div class="col-lg-2 col-6 text-white text-center"><div class="stats"><h2 class="text-accent h1" style="margin-top:0;">8</h2><p>Years, LLC Established</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHORITY BLOCK -->
+    <section class="position-relative bg-accent-secondary" style="padding:50px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="w-100 d-flex flex-wrap">
+            <div class="col-md-6" style="margin:15px 0;">
+              <div class="position-relative h-100">
+                <picture>
+                  <source type="image/webp" srcset="Image-02.png">
+                  <img src="Image-02.png" alt="Andrew Shockwave Electric owner electrician" style="border-radius:16px;object-fit:cover;top:0;left:0;" class="w-100 h-100 position-lg-absolute">
+                </picture>
+              </div>
+            </div>
+            <div class="col-md-6" style="margin:15px 0;">
+              <div class="bg-accent" style="border-radius:16px;padding:50px 15px;">
+                <h2>Andrew's 20 Years of Electrical Expertise at Your Service</h2>
+                <p style="color:#111;">Andrew is a licensed owner-operator electrician with 20 years of hands-on experience in residential and light commercial electrical work throughout Southwest Florida. As the founder of Shockwave Electric, he personally handles every job from panel replacements and EV charger installs to lighting upgrades and service calls at banks, retail spaces, and office buildings. When you hire Shockwave, you get Andrew on your job, not a crew of strangers.</p>
+                <div class="d-flex align-items-center col-lg-9" style="margin:25px 0;">
+                  <img src="Icon-01.png" style="width:45px;height:45px;margin-right:15px;" alt="">
+                  <p class="bold" style="margin:0;color:#111;">Licensed and Insured with 20 Years of Real Electrical Experience Behind Every Job</p>
+                </div>
+                <div class="d-flex align-items-center col-lg-9" style="margin-bottom:25px;">
+                  <img src="Icon-02.png" style="width:45px;height:45px;margin-right:15px;" alt="">
+                  <p class="bold" style="margin:0;color:#111;">Permits Pulled, Inspections Scheduled, FPL Coordinated for You from Start to Finish</p>
+                </div>
+                <div class="d-flex align-items-center col-lg-9" style="margin-bottom:25px;">
+                  <img src="Icon-03.png" style="width:45px;height:45px;margin-right:15px;" alt="">
+                  <p class="bold" style="margin:0;color:#111;">Residential and Light Commercial Work Done Right the First Time, Every Time</p>
+                </div>
+                <a class="btn-main d-inline-block small" href="#get-estimate">Get Free Estimate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="position-relative bg-accent-secondary" style="padding:100px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center text-white" style="padding-bottom:50px;">
+            <h2>Residential &amp; Commercial Electrical Services<br>in Sarasota County</h2>
+          </div>
+          <div class="w-100 d-flex flex-wrap">
+            <a href="/services/panel-replacement/" class="col-md-6 col-hover h-auto" style="margin:15px 0;">
+              <div class="position-relative h-100 overflow-h d-flex align-items-end" style="border-radius:16px;padding:0 15px;">
+                <img src="Service-01.png" alt="Electrical panel replacement and service changeout Southwest Florida" style="top:0;left:0;object-fit:cover;" class="w-100 h-100 position-absolute">
+                <div class="position-absolute w-100 h-100" style="top:0;left:0;opacity:1;background:linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+                <div class="position-relative text-white" style="padding-top:190px;padding-bottom:24px;">
+                  <div style="text-shadow:0 0 3px black;">
+                    <h3 style="font-size:1.4rem;">Panel Replacement &amp; Service Changeouts</h3>
+                    <p class="bold">Main electrical panel upgrades, service changeouts, and breaker replacements for residential and light commercial properties. Permits pulled and inspections coordinated in-house.</p>
+                  </div>
+                  <span class="btn-main">Learn More</span>
+                </div>
+              </div>
+            </a>
+            <a href="/services/ev-charger-installation/" class="col-md-6 col-hover h-auto" style="margin:15px 0;">
+              <div class="position-relative h-100 overflow-h d-flex align-items-end" style="border-radius:16px;padding:0 15px;">
+                <img src="Service-02.png" alt="EV charger installation residential and commercial Florida" style="top:0;left:0;object-fit:cover;" class="w-100 h-100 position-absolute">
+                <div class="position-absolute w-100 h-100" style="top:0;left:0;opacity:1;background:linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+                <div class="position-relative text-white" style="padding-top:190px;padding-bottom:24px;">
+                  <div style="text-shadow:0 0 3px black;">
+                    <h3 style="font-size:1.4rem;">EV Charger Installation</h3>
+                    <p class="bold">Level 2 home EV charger installation and commercial EV charging station setups for businesses, retail, and office buildings. Done fast, done safe, done with proper permits.</p>
+                  </div>
+                  <span class="btn-main">Learn More</span>
+                </div>
+              </div>
+            </a>
+            <a href="/services/lighting/" class="col-md-6 col-hover h-auto" style="margin:15px 0;">
+              <div class="position-relative h-100 overflow-h d-flex align-items-end" style="border-radius:16px;padding:0 15px;">
+                <img src="Service-03.png" alt="Lighting installation residential and commercial Florida" style="top:0;left:0;object-fit:cover;" class="w-100 h-100 position-absolute">
+                <div class="position-absolute w-100 h-100" style="top:0;left:0;opacity:1;background:linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+                <div class="position-relative text-white" style="padding-top:190px;padding-bottom:24px;">
+                  <div style="text-shadow:0 0 3px black;">
+                    <h3 style="font-size:1.4rem;">Lighting Installation</h3>
+                    <p class="bold">Interior and exterior lighting upgrades, commercial lighting retrofits for banks, retail spaces, and offices, and custom lighting installations for homes and multifamily properties.</p>
+                  </div>
+                  <span class="btn-main">Learn More</span>
+                </div>
+              </div>
+            </a>
+            <a href="/services/light-commercial/" class="col-md-6 col-hover h-auto" style="margin:15px 0;">
+              <div class="position-relative h-100 overflow-h d-flex align-items-end" style="border-radius:16px;padding:0 15px;">
+                <img src="Service-04.png" alt="Light commercial electrical service calls Florida" style="top:0;left:0;object-fit:cover;" class="w-100 h-100 position-absolute">
+                <div class="position-absolute w-100 h-100" style="top:0;left:0;opacity:1;background:linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+                <div class="position-relative text-white" style="padding-top:190px;padding-bottom:24px;">
+                  <div style="text-shadow:0 0 3px black;">
+                    <h3 style="font-size:1.4rem;">Light Commercial Electrical</h3>
+                    <p class="bold">Service calls, panel work, lighting, security systems, and automatic door electrical for banks, retail spaces, and offices. No heavy commercial, no restaurants. Just clean, reliable work.</p>
+                  </div>
+                  <span class="btn-main">Learn More</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZATIONS / TRUST LOGOS -->
+    <section class="position-relative bg-accent-secondary text-white" style="padding:0 0 75px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center" style="padding-bottom:40px;">
+            <h2>Credentials and Memberships You Can Count On</h2>
+          </div>
+          <div class="w-100 d-flex flex-wrap">
+            <div class="col-lg-4 col-6 d-flex h-auto text-center"><div><img src="Organization-01.png" alt="Florida Department of Business and Professional Regulation" class="w-75 mx-auto" style="height:150px;object-fit:contain;"><div><h2 style="margin-top:0;font-size:1.5rem">Florida DBPR Licensed</h2></div></div></div>
+            <div class="col-lg-4 col-6 d-flex h-auto text-center"><div><img src="Organization-02.png" alt="National Electrical Contractors Association NECA" class="w-75 mx-auto" style="height:150px;object-fit:contain;"><div><h2 style="margin-top:0;font-size:1.5rem">NECA Member</h2></div></div></div>
+            <div class="col-lg-4 col-6 d-flex h-auto text-center"><div><img src="Organization-03.png" alt="Better Business Bureau BBB Accredited" class="w-75 mx-auto" style="height:150px;object-fit:contain;"><div><h2 style="margin-top:0;font-size:1.5rem">BBB Accredited</h2></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="position-relative lazyloaded" style="padding:100px 0;background-attachment:fixed;background-size:cover;background-image:url('Background-Image-01.png');">
+      <div class="bg-accent-secondary position-absolute w-100 h-100" style="top:0;left:0;opacity:.85;"></div>
+      <div class="position-absolute w-100" style="height:150px;top:0;left:0;background:linear-gradient(180deg, rgba(var(--accent-secondary-rgb), 1) 0%, rgba(var(--accent-secondary-rgb), 0) 100%);"></div>
+      <div class="position-absolute w-100" style="height:150px;bottom:0;left:0;background:linear-gradient(0deg, rgba(var(--accent-secondary-rgb), 1) 0%, rgba(var(--accent-secondary-rgb), 0) 100%);"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-white" style="padding-bottom:50px;">
+            <h2>Why Southwest Florida Homeowners and Business Owners Call Shockwave First</h2>
+            <p>Shockwave Electric handles the electrical problems that stress people out, from dead panels and missing permits to commercial lighting that just will not stay on. Andrew does the work himself so you always know who to call and what you are getting.</p>
+          </div>
+          <div class="w-100 d-flex flex-wrap text-white">
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">You Always Talk Directly to the Licensed Electrician</h2>
+                  <p>Andrew owns it, Andrew does it. No middlemen, no sub crews. You get 20 years of experience every single visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">Permits, Inspections, and FPL Scheduling All Handled for You</h2>
+                  <p>Andrew pulls every permit and schedules every inspection. You do not have to figure any of that out on your own.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">Panel Replacements Done Right So You Pass Inspection</h2>
+                  <p>A bad panel is a fire waiting to happen. Andrew fixes it completely so it passes inspection and keeps your family safe.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">EV Charger Installs for Homes and Commercial Properties</h2>
+                  <p>Plug in your electric vehicle at home or your business. Andrew installs Level 2 chargers fast and handles all the wiring safely.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">Commercial Lighting That Makes Your Business Look Professional</h2>
+                  <p>Banks, retail stores, and offices need lighting that works every day. Andrew keeps your business bright and your customers comfortable.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex mb-4">
+                <div style="margin-right:20px;margin-top:4px;">
+                  <svg fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.6 454.16" class="position-absolute" style="width:15px;height:15px;object-fit:contain;top:5px;">
+                    <g><g><g><g>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19l-91.14-91.14L27.56,293.61c-36.75,36.75-36.75,96.3,0,133.04,18.35,18.35,42.46,27.5,66.52,27.5s48.17-9.15,66.52-27.5l157.62-157.67c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                      <path fill="var(--accent-primary)" d="M318.22,185.19L160.6,27.52C123.86-9.17,64.3-9.17,27.56,27.52,9.21,45.92.01,69.98.01,94.05s9.2,48.13,27.55,66.52l199.52,199.57,91.14-91.14c10.73-10.73,17.37-25.55,17.37-41.9s-6.64-31.17-17.37-41.9Z"></path>
+                    </g></g></g></g>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h3">Serving Five Counties Without Missing a Beat</h2>
+                  <p>Sarasota County, Hillsborough, Port Charlotte, DeSoto, and Hardee County. Andrew drives to you wherever you are in Southwest Florida.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="position-relative bg-accent-secondary text-white steps" style="padding:50px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center" style="padding-bottom:50px;">
+            <h2>How to Work with a Licensed Electrician</h2>
+          </div>
+          <div class="w-100 d-flex flex-wrap text-white">
+            <div class="col-lg-4 col-md-6"><div>
+              <img src="Step-01.png" alt="Request your estimate" style="height:300px;object-fit:cover;border-top-right-radius: 220px;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;" class="w-100 border-radius">
+              <div>
+                <h2 class="h3" style="margin-top:18px">Request Your Free Estimate</h2>
+                <p>Tell Andrew what is going on, whether it is a tripping breaker, a panel that needs replacing, or a new EV charger. He will confirm the scope and give you a clear price.</p>
+              </div>
+            </div></div>
+            <div class="col-lg-4 col-md-6"><div>
+              <img src="Step-02.png" alt="Andrew does the work" style="height:300px;object-fit:cover;border-top-right-radius: 220px;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;" class="w-100 border-radius">
+              <div>
+                <h2 class="h3" style="margin-top:18px">Andrew Does the Work</h2>
+                <p>A 30% deposit books your job. Andrew shows up, does the electrical work himself, pulls the permit, and schedules the inspection. You do not lift a finger.</p>
+              </div>
+            </div></div>
+            <div class="col-lg-4 col-md-6"><div>
+              <img src="Step-03.png" alt="Inspection passes and job is done" style="height:300px;object-fit:cover;border-top-right-radius: 220px;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;" class="w-100 border-radius">
+              <div>
+                <h2 class="h3" style="margin-top:18px">Inspection Passes, Job Is Done</h2>
+                <p>Andrew coordinates the final inspection, ensures everything passes code, and labels your panel accurately. Your electrical system is safe, legal, and ready to go.</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATIONS / DELIVERABLES -->
+    <section class="position-relative bg-gradient-black-top-secondary-bottom text-white" style="padding:50px 0 50px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h2>What Shockwave Electric Provides on Every Job</h2>
+            <p>From a clear written estimate upfront to a labeled panel and passed inspection at the end, here is exactly what you get when you hire Shockwave Electric. No surprises, no hidden fees, no handoff to someone else.</p>
+            <img src="Integration.png" style="width:100%;height:auto;" alt="Shockwave Electric job deliverables and process" />
+            <a class="btn-main d-inline-block small" href="#get-estimate">Get Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="position-relative bg-accent-secondary text-white" style="padding:100px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center" style="padding-bottom:50px;">
+            <h2>What Homeowners and Business Owners Say<br>About Shockwave</h2>
+            <div class="divider mx-auto"></div>
+          </div>
+          <div class="w-100 d-flex flex-wrap">
+            <div class="col-md-6" style="padding:15px;">
+              <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:30px;border:1px solid rgba(245,200,66,0.2);height:100%;">
+                <p style="color:rgba(255,255,255,0.85);font-style:italic;">"Andrew replaced our main panel and had the permit and FPL disconnect handled before we even realized it. Everything passed inspection on the first try. We felt completely taken care of from start to finish."</p>
+                <p class="bold" style="color:var(--accent-primary);margin:0;">Marcus D. Harrington</p>
+                <p style="margin:0;font-size:0.85rem;">Homeowner, Sarasota County</p>
+              </div>
+            </div>
+            <div class="col-md-6" style="padding:15px;">
+              <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:30px;border:1px solid rgba(245,200,66,0.2);height:100%;">
+                <p style="color:rgba(255,255,255,0.85);font-style:italic;">"Our retail store had lighting issues for months. Andrew came out, diagnosed the problem in under an hour, and had everything fixed the next day. He is the only electrician I will ever call for our locations."</p>
+                <p class="bold" style="color:var(--accent-primary);margin:0;">Sandra L. Vega</p>
+                <p style="margin:0;font-size:0.85rem;">Retail Store Owner, Hillsborough County</p>
+              </div>
+            </div>
+            <div class="col-md-6" style="padding:15px;">
+              <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:30px;border:1px solid rgba(245,200,66,0.2);height:100%;">
+                <p style="color:rgba(255,255,255,0.85);font-style:italic;">"I needed a Level 2 EV charger installed at my home in Port Charlotte. Andrew gave me a fair quote, showed up on time, handled the permit, and got it done in one day. Charges perfectly every night now."</p>
+                <p class="bold" style="color:var(--accent-primary);margin:0;">Robert T. Calloway</p>
+                <p style="margin:0;font-size:0.85rem;">Homeowner, Port Charlotte</p>
+              </div>
+            </div>
+            <div class="col-md-6" style="padding:15px;">
+              <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:30px;border:1px solid rgba(245,200,66,0.2);height:100%;">
+                <p style="color:rgba(255,255,255,0.85);font-style:italic;">"We manage two condo buildings and Andrew is our go-to electrician for all service calls. He knows the code, he works clean, and he always leaves the panel labeled correctly. Reliable and completely trustworthy."</p>
+                <p class="bold" style="color:var(--accent-primary);margin:0;">Janet M. Ostrowski</p>
+                <p style="margin:0;font-size:0.85rem;">Property Manager, Sarasota County</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="position-relative bg-gradient-secondary-top-black-bottom text-white" style="padding:150px 0 50px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 order-md-1 order-2" style="padding-top:15px;">
+            <h2 style="font-size:28px">Frequently Asked Questions</h2>
+            <div class="divider" style="margin-left:0;"></div>
+            <div style="height:50px" aria-hidden="true"></div>
+
+            <div class="accordion position-relative" style="border-bottom:1px solid #D5D8DC;padding-right:15px;">
+              <div class="position-absolute chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74"><polygon fill="var(--accent-primary)" points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"></polygon></svg></div>
+              <h3 class="button" style="cursor:pointer">01.) What areas do you service?</h3>
+              <div class="accordion-content"><div class="accordion-content-inner"><p style="margin:0;">Shockwave Electric serves Sarasota County, Hillsborough County, Port Charlotte, DeSoto County, and Hardee County. Andrew drives throughout Southwest Florida for residential and light commercial electrical work. Note that there is a small radius within Sarasota County where service is unavailable, but Andrew is happy to refer you to a trusted contact for those locations.</p></div></div>
+            </div>
+
+            <div class="accordion position-relative" style="border-bottom:1px solid #D5D8DC;padding-right:15px;">
+              <div class="position-absolute chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74"><polygon fill="var(--accent-primary)" points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"></polygon></svg></div>
+              <h3 class="button" style="cursor:pointer">02.) Do I need a permit for my electrical project?</h3>
+              <div class="accordion-content"><div class="accordion-content-inner"><p style="margin:0;">Most panel replacements, new circuits, and EV charger installations require a permit. The good news is Andrew handles all of that for you. He pulls the permit, schedules the inspection, and coordinates the FPL disconnect and reconnect when needed. You do not have to navigate any of it on your own.</p></div></div>
+            </div>
+
+            <div class="accordion position-relative" style="border-bottom:1px solid #D5D8DC;padding-right:15px;">
+              <div class="position-absolute chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74"><polygon fill="var(--accent-primary)" points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"></polygon></svg></div>
+              <h3 class="button" style="cursor:pointer">03.) How does pricing and payment work?</h3>
+              <div class="accordion-content"><div class="accordion-content-inner"><p style="margin:0;">Every project starts with a free estimate. All work requires a 30% deposit to book your job. Electrical pricing varies depending on the scope, materials, and scheduling. Andrew gives you a clear quote before any work begins so there are no surprises when the job is done.</p></div></div>
+            </div>
+
+            <div class="accordion position-relative" style="border-bottom:1px solid #D5D8DC;padding-right:15px;">
+              <div class="position-absolute chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74"><polygon fill="var(--accent-primary)" points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"></polygon></svg></div>
+              <h3 class="button" style="cursor:pointer">04.) Do you work on commercial properties?</h3>
+              <div class="accordion-content"><div class="accordion-content-inner"><p style="margin:0;">Yes. Shockwave Electric handles light commercial electrical work including service calls, commercial lighting retrofits, EV charging stations, and panel work for banks, retail spaces, offices, and multifamily properties. Andrew focuses on light commercial and does not take on heavy industrial or restaurant work.</p></div></div>
+            </div>
+
+            <div class="accordion position-relative" style="border-bottom:1px solid #D5D8DC;padding-right:15px;">
+              <div class="position-absolute chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74"><polygon fill="var(--accent-primary)" points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"></polygon></svg></div>
+              <h3 class="button" style="cursor:pointer">05.) Will the same electrician show up every time?</h3>
+              <div class="accordion-content"><div class="accordion-content-inner"><p style="margin:0;">Yes. Andrew is the owner and the electrician. He is not going to send a different crew to your home or business. When you hire Shockwave Electric, you work directly with the licensed professional who quoted your job from start to finish.</p></div></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 h-auto">
+            <div class="position-relative h-100">
+              <img src="FAQs.png" alt="Shockwave Electric Andrew licensed electrician Southwest Florida" class="w-100 h-100 position-lg-absolute" style="border-radius:8px;object-fit:cover;object-position:top;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO VALUE / CONTACT FORM -->
+    <section class="position-relative bg-gradient-secondary-top-white-bottom" style="padding:100px 0;" id="get-estimate">
+      <div class="container">
+        <div class="row justify-content-center bg-accent border-radius" style="padding:35px 25px 0;">
+          <div class="col-lg-6">
+            <h2>Get a Fast Estimate on Your Electrical Job</h2>
+            <div class="divider" style="background:var(--accent-secondary);margin-left:0;"></div>
+            <p style="color:#111;">Hire Shockwave Electric for panel replacements, EV charger installation, lighting upgrades, and light commercial service calls across Southwest Florida. Andrew handles everything from the first call to the final inspection.</p>
+            <img src="Expert.png" alt="Andrew Shockwave Electric owner operator electrician" style="bottom:0;width:220px;height:auto;" class="position-lg-absolute">
+          </div>
+          <div class="col-lg-6">
+            <div class="position-absolute d-none d-lg-block" style="height:75%;width:1px;background:gray;top:50%;transform:translate(0,-50%);"></div>
+            <div style="padding:0 25px 25px;">
+              <h3>Request Your Free Estimate</h3>
+              <div class="gform_wrapper">
+                <form method="post" action="/">
+                  <div class="row">
+                    <div class="col-md-6 gfield">
+                      <label for="name">Name</label>
+                      <input id="name" name="name" type="text" required>
+                    </div>
+                    <div class="col-md-6 gfield">
+                      <label for="email">Email</label>
+                      <input id="email" name="email" type="email" required>
+                    </div>
+                    <div class="col-md-6 gfield">
+                      <label for="phone">Phone</label>
+                      <input id="phone" name="phone" type="tel" required>
+                    </div>
+                    <div class="col-md-6 gfield">
+                      <label for="property-type">Property Type</label>
+                      <input id="property-type" name="property-type" type="text" placeholder="Residential or Commercial">
+                    </div>
+                    <div class="col-12 gfield">
+                      <label for="details">Describe the Electrical Issue or Project</label>
+                      <textarea id="details" name="details" rows="3"></textarea>
+                    </div>
+                    <div class="col-12 gfield" style="margin-bottom:-55px;">
+                      <button type="submit" class="btn-main gform_button">Request Free Estimate</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="position-relative bg-white" style="padding:50px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-6 col-12">
+            <a href="/" title="Homepage link for Shockwave Electric">
+              <div style="" id="logoMain">
+                <img src="Logo.png" alt="Shockwave Electric logo">
+              </div>
+              <div class="divider" style="background:var(--accent-secondary);margin-left:0;"></div>
+            </a>
+            Shockwave Electric is a licensed, owner-operated electrical company serving Southwest Florida with 20 years of residential and light commercial expertise. Panel replacements, EV chargers, lighting, permits, and inspections all handled in-house.
+            <p class="bold" style="margin-bottom:0;margin-top:16px;">Email Us</p>
+            <a class="email" href="mailto:shockwaveelect@gmail.com">shockwaveelect@gmail.com</a>
+          </div>
+
+          <div class="col-12 desktop-hidden" style="padding:25px;"></div>
+
+          <div class="col-lg-6 col-12">
+            <h2 class="h4">Licensed Electrician Southwest Florida</h2>
+            <svg style="width:200px;" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 542.9 8.73">
+  <defs>
+    <style>
+      .cls-1 { fill: url(#linear-gradient-2); }
+      .cls-2 { fill: none; stroke: url(#linear-gradient); stroke-miterlimit: 10; }
+    </style>
+    <linearGradient id="linear-gradient" x1="37.12" y1="4.37" x2="542.9" y2="4.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="var(--accent-primary)"/>
+      <stop offset="1" stop-color="var(--accent-tertiary)"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="4.36" x2="27.47" y2="4.36" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <line class="cls-2" x1="37.12" y1="4.37" x2="542.9" y2="4.37"/>
+      <polygon class="cls-1" points="22.56 8.73 0 8.73 4.91 0 27.47 0 22.56 8.73"/>
+    </g>
+  </g>
+</svg>
+            <div class="menu-footer-container">
+              <ul id="menu-footer" class="menu list-unstyled mb-0 flex-column align-items-start">
+                <li><a href="/services/panel-replacement/">Panel Replacement &amp; Service Changeouts</a></li>
+                <li><a href="/services/ev-charger-installation/">EV Charger Installation</a></li>
+                <li><a href="/services/lighting/">Lighting Installation</a></li>
+                <li><a href="/services/light-commercial/">Light Commercial Electrical</a></li>
+                <li><a href="/services/residential/">Residential Electrical Services</a></li>
+                <li><a href="/about/">About Andrew</a></li>
+                <li><a href="#get-estimate">Get Free Estimate</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 desktop-hidden" style="padding:25px;"></div>
+
+          <div class="col-lg-3 col-12">
+            <h2 class="h4">Contact Shockwave</h2>
+            <svg style="width:200px;" id="Layer_2b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 542.9 8.73">
+  <defs>
+    <style>
+      .cls-1b { fill: url(#linear-gradient-2b); }
+      .cls-2b { fill: none; stroke: url(#linear-gradientb); stroke-miterlimit: 10; }
+    </style>
+    <linearGradient id="linear-gradientb" x1="37.12" y1="4.37" x2="542.9" y2="4.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="var(--accent-primary)"/>
+      <stop offset="1" stop-color="var(--accent-tertiary)"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2b" x1="0" y1="4.36" x2="27.47" y2="4.36" xlink:href="#linear-gradientb"/>
+  </defs>
+  <g id="Layer_1-2b" data-name="Layer 1">
+    <g>
+      <line class="cls-2b" x1="37.12" y1="4.37" x2="542.9" y2="4.37"/>
+      <polygon class="cls-1b" points="22.56 8.73 0 8.73 4.91 0 27.47 0 22.56 8.73"/>
+    </g>
+  </g>
+</svg>
+            <div class="d-flex" style="padding:15px 0;">
+              <img src="https://forensicpathologist.latinowebstudio.com/wp-content/uploads/2025/11/Phone.png" class="h-auto" alt="" style="width:15px;margin-right:15px;object-fit:contain;">
+              <div class="bold">
+                <a class="phone bold" href="tel:9412223333">(941) 222-3333</a>
+              </div>
+            </div>
+            <hr>
+            <div class="d-flex" style="padding:15px 0;">
+              <img src="https://forensicpathologist.latinowebstudio.com/wp-content/uploads/2025/11/Working-Hours.png" class="h-auto" alt="" style="width:15px;margin-right:15px;object-fit:contain;">
+              <p class="bold" style="margin:0;">Monday - Friday:<br>07:00 am - 05:00 pm ET<br><br>Saturday - Sunday:<br>Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="modal-custom mobile-menu" style="opacity:0;pointer-events:none;">
+      <div class="modal-content-menu modal-content-custom" style="padding:150px 15px;background:var(--accent-secondary);margin-top:0;margin-left:auto;margin-bottom:0;border-left:0;border-bottom:0;border-bottom-left-radius:0;border-top-left-radius:0;height:100vh;">
+        <span class="close-custom" id="navMenuClose">&times;</span>
+        <div style="width:100%;max-width:165px;" id="logoMain">
+          <a href="/" title="Shockwave Electric">
+            <div style="min-width:100px;width:100%;transition:all .25s ease-in-out;">
+              <img src="Logo.png" alt="Shockwave Electric logo">
+            </div>
+          </a>
+        </div>
+        <div class="menu-primary-container mt-4">
+          <ul id="menu-primary-1" class="menu list-unstyled mb-0 flex-column align-items-start">
+            <li><a href="/services/panel-replacement/">Panel Replacement</a></li>
+            <li><a href="/services/ev-charger-installation/">EV Charger Installation</a></li>
+            <li><a href="/services/lighting/">Lighting Installation</a></li>
+            <li><a href="/services/light-commercial/">Light Commercial Electrical</a></li>
+            <li><a href="/about/">About Andrew</a></li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a class="btn-main d-inline-block small" href="#get-estimate">Get Free Estimate</a>
+          <div style="margin:15px 0;">
+            <span>Call Now: </span>
+            <a href="tel:9412223333" class="text-link d-inline-block phone">(941) 222-3333</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const navMenuClose = document.getElementById("navMenuClose");
+
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener("click", function () {
+        mobileMenu.classList.add("is-open");
+      });
+    }
+
+    if (navMenuClose && mobileMenu) {
+      navMenuClose.addEventListener("click", function () {
+        mobileMenu.classList.remove("is-open");
+      });
+    }
+
+    if (mobileMenu) {
+      mobileMenu.addEventListener("click", function (event) {
+        if (event.target === mobileMenu) {
+          mobileMenu.classList.remove("is-open");
+        }
+      });
+    }
+
+    document.querySelectorAll(".accordion .button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const item = button.closest(".accordion");
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

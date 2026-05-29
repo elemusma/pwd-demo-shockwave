@@ -1,0 +1,23 @@
+:root {
+    --primary: #f26522;
+    --secondary: #0f2849;
+}
+
+.logged-in header.position-fixed {
+    margin-top: 32px;
+}
+
+@media only screen and (max-width:767px) {
+    .logged-in header.position-fixed {
+        margin-top: 45px;
+    }
+}
+
+.wp-block-create-block-content-features svg {
+    min-width: 35px !important;
+    min-height: 25px !important;
+}
+.row-checkmarks svg {
+	min-width: 10px !important;
+    min-height: 10px !important;
+}
